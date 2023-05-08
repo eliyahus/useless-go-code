@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/eliyahus/useless-go-code/eatingunicorns"
+)
 
 func main() {
-	fmt.Println("nothing here")
+	u := eatingunicorns.NewUnicorn("Glory", 2)
+	fmt.Println(u)
 }

@@ -8,7 +8,16 @@ type Unicorn struct {
 	eatable bool
 }
 
-// EatUnicorn returns true if a unicorn can be eaten
-func EatUnicorn(u Unicorn) bool {
+// NewUnicorn creates a new unicorn. It decides whether it's eatable based on the age provided
+func NewUnicorn(first string, age int) Unicorn {
+	return Unicorn{
+		first:   first,
+		age:     age,
+		eatable: age > 0,
+	}
+}
+
+// Eatable returns true if a unicorn can be eaten
+func Eatable(u Unicorn) bool {
 	return u.eatable
 }
