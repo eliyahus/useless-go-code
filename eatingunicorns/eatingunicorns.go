@@ -21,3 +21,8 @@ func NewUnicorn(first string, age int) Unicorn {
 func Eatable(u Unicorn) bool {
 	return u.eatable
 }
+
+// Name returns the firstname of the unicorn
+func (u Unicorn) Name() string {
+	return u.first
+}
