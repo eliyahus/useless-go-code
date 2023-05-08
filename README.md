@@ -1,0 +1,1 @@
+# useless-go-code
