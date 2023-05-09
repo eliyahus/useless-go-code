@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	u := eatingunicorns.NewUnicorn("Glory", 2)
+	u := eatingunicorns.NewUnicorn("Glory")
 	fmt.Println(u)
-	fmt.Printf("Is %s eatable? %t", u.Name(), eatingunicorns.Eatable(u))
+	fmt.Printf("Is %s eatable? %t", u.Name(), eatingunicorns.Eatable(&u))
 }

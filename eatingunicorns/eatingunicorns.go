@@ -1,28 +1,24 @@
-// Package eatingunicorns is a package for eating unicorns
+// Package eatingunicorns is a package for eating unicorns.
 package eatingunicorns
 
-// Unicorn is a struct for unicorns
+// Unicorn is a struct for unicorns.
 type Unicorn struct {
-	first   string
-	age     int
-	eatable bool
+	first string
 }
 
-// NewUnicorn creates a new unicorn. It decides whether it's eatable based on the age provided
-func NewUnicorn(first string, age int) Unicorn {
+// NewUnicorn creates a new unicorn.
+func NewUnicorn(first string) Unicorn {
 	return Unicorn{
-		first:   first,
-		age:     age,
-		eatable: age > 0,
+		first: first,
 	}
 }
 
-// Eatable returns true if a unicorn can be eaten
-func Eatable(u Unicorn) bool {
-	return u.eatable
+// Eatable returns true if a unicorn can be eaten.
+func Eatable(u *Unicorn) bool {
+	return u != nil
 }
 
-// Name returns the firstname of the unicorn
+// Name returns the firstname of the unicorn.
 func (u Unicorn) Name() string {
 	return u.first
 }
